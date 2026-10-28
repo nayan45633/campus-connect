@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Brand Primary: Deep Indigo palette */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  /* Neutrals: Soft neutral canvas */
+  --color-campus-bg: #f8fafc;
+  --color-campus-surface: #ffffff;
+  --color-campus-surface-subtle: #f1f5f9;
+  --color-campus-border: #e2e8f0;
+  --color-campus-border-strong: #cbd5e1;
+  --color-campus-text-main: #0f172a;
+  --color-campus-text-muted: #64748b;
+  --color-campus-text-subtle: #94a3b8;
+
+  /* Dark Theme Palette (Charcoal and slate surfaces) */
+  --color-dark-main: #111318;
+  --color-dark-surface: #181b23;
+  --color-dark-card: #1d212b;
+  --color-dark-elevated: #242936;
+  --color-dark-border: #2b303b;
+  --color-dark-border-strong: #3d4454;
+  --color-dark-text-main: #f1f3f9;
+  --color-dark-text-muted: #a5adbd;
+  --color-dark-text-subtle: #7a8396;
+  --color-dark-accent: #818cf8;
+  --color-dark-accent-hover: #a5b4fc;
+
+  /* Font */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Restrained, elegant box shadows for polished cards */
+  --shadow-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  --shadow-card-hover: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+  --shadow-popover: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+}
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-campus-bg, #f8fafc);
+  color: var(--color-campus-text-main, #0f172a);
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background-color: #111318;
+  color: #f1f3f9;
+}
+
+/* Restrained custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #2b303b;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3d4454;
+}
+
+/* Focus styles for keyboard accessibility */
+:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.dark :focus-visible {
+  outline: 2px solid #818cf8;
+}
+
+.dark ::selection {
+  background-color: #312e81;
+  color: #e0e7ff;
+}
