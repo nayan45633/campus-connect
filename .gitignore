@@ -47,3 +47,20 @@ vite.config.ts.timestamp-*
 coverage/
 .temp/
 *.tmp
+
+# Python & Backend
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+backend/venv/
+backend/.venv/
+env/
+backend/.env
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/

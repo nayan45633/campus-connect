@@ -1,0 +1,101 @@
+from app.schemas.common import RootInfoResponse, ErrorDetail
+from app.schemas.health import HealthCheckResponse, DatabaseHealth
+from app.schemas.auth import (
+    UserRegisterRequest,
+    LoginRequest,
+    TokenResponse,
+    UserPublic,
+    StudentProfilePublic,
+)
+from app.schemas.post import (
+    AuthorPublic,
+    PostCreateRequest,
+    PostResponse,
+    PaginatedPostsResponse,
+    CommentCreateRequest,
+    CommentResponse,
+    PaginatedCommentsResponse,
+    LikeResponse,
+    ActionMessageResponse,
+)
+from app.schemas.event import (
+    EventOrganizerPublic,
+    EventCreateRequest,
+    EventUpdateRequest,
+    EventResponse,
+    PaginatedEventsResponse,
+    RSVPResponse,
+)
+from app.schemas.notice import (
+    NoticeCreateRequest,
+    NoticeUpdateRequest,
+    NoticeResponse,
+    PaginatedNoticesResponse,
+    NoticeReadResponse,
+)
+from app.schemas.community import (
+    CommunityCreateRequest,
+    CommunityUpdateRequest,
+    CommunityResponse,
+    PaginatedCommunitiesResponse,
+    CommunityMembershipResponse,
+    CommunityMemberPublic,
+    PaginatedCommunityMembersResponse,
+)
+from app.schemas.notification import (
+    NotificationResponse,
+    PaginatedNotificationsResponse,
+    UnreadCountResponse,
+)
+from app.schemas.profile import (
+    StudentProfileUpdateRequest,
+    StudentProfileResponse,
+    StudentProfilePublicResponse,
+    MediaUploadResponse,
+)
+
+__all__ = [
+    "RootInfoResponse",
+    "ErrorDetail",
+    "HealthCheckResponse",
+    "DatabaseHealth",
+    "UserRegisterRequest",
+    "LoginRequest",
+    "TokenResponse",
+    "UserPublic",
+    "StudentProfilePublic",
+    "AuthorPublic",
+    "PostCreateRequest",
+    "PostResponse",
+    "PaginatedPostsResponse",
+    "CommentCreateRequest",
+    "CommentResponse",
+    "PaginatedCommentsResponse",
+    "LikeResponse",
+    "ActionMessageResponse",
+    "EventOrganizerPublic",
+    "EventCreateRequest",
+    "EventUpdateRequest",
+    "EventResponse",
+    "PaginatedEventsResponse",
+    "RSVPResponse",
+    "NoticeCreateRequest",
+    "NoticeUpdateRequest",
+    "NoticeResponse",
+    "PaginatedNoticesResponse",
+    "NoticeReadResponse",
+    "CommunityCreateRequest",
+    "CommunityUpdateRequest",
+    "CommunityResponse",
+    "PaginatedCommunitiesResponse",
+    "CommunityMembershipResponse",
+    "CommunityMemberPublic",
+    "PaginatedCommunityMembersResponse",
+    "NotificationResponse",
+    "PaginatedNotificationsResponse",
+    "UnreadCountResponse",
+    "StudentProfileUpdateRequest",
+    "StudentProfileResponse",
+    "StudentProfilePublicResponse",
+    "MediaUploadResponse",
+]
